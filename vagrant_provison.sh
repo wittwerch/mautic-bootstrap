@@ -1,6 +1,10 @@
 cd /var/www
-curl -O https://github.com/mautic/mautic/archive/1.2.2.tar.gz
-tar xfz mautic-1.2.2.tar.gz
+mkdir /home/vagrant/.composer
+cp auth.json /home/vagrant/.composer/auth.json
+
+curl -O -L https://github.com/mautic/mautic/archive/1.2.2.tar.gz >/dev/null
+tar xfz 1.2.2.tar.gz
 mv mautic-1.2.2 public
+
 cd public
-composer install --no-dev --prefer-dist
+composer install --no-progress --prefer-dist
