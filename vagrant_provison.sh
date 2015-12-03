@@ -7,4 +7,4 @@ tar xfz 1.2.2.tar.gz
 mv mautic-1.2.2 public
 
 cd public
-composer install --no-progress --prefer-dist
+composer install --no-progress --no-dev --prefer-dist
